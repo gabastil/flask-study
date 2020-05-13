@@ -1,43 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Flask Example Page</title>
-    <style>
-        body {
-            font-family: "Helvetica", sans-serif;
-        }
+{% extends "base.html" %}
 
-        div {
-            display: block;
-            width:  50%;
-            margin: auto;
-            border-radius: 1em;
-            margin-bottom: 1em;
-            padding: 1em;
-        }
+{% block content %}
 
-        .panel {
-            background: lightgray;
-        }
+{% for name in data %}
+    <p>This is the <a>{{name}}'s</a> item.</p>
+{% endfor %}
 
-        .panel h1 {
-            text-align: center;
-        }
+<a href={{url_for("signin")}}>Sign in </a>
 
-    </style>
-</head>
-<body>
-    <div class='panel' rel='study-1'>
-        <h1>Pseudocode Study — Templates</h1>
-        Hello
-        <ul>
-            {% for i in range(length) %}
-                <li>This is the {{i}}th index in {{data[i]}}.</li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class='panel' rel='study-2'></div>
-    <div class='panel' rel='study-3'></div>
-    <div class='panel' rel='study-4'></div>
-</body>
-</html>
+{% endblock %}
