@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 
+{% block header %}
+|
+    <a href="{{url_for('signin')}}">Sign In</a> |
+	<a href="{{url_for('admin', name='John')}}">User's Page</a>
+{% endblock %}
+
 {% block content %}
 
-{% for name in data %}
-    <p>This is the <a>{{name}}'s</a> item.</p>
-{% endfor %}
-
-<a href={{url_for("signin")}}>Sign in </a>
+	<div class='panel content'>
+		{% for name in data %}
+		    <p>This is the <a>{{name}}'s</a> item.</p>
+		{% endfor %}
+	</div>
 
 {% endblock %}

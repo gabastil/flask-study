@@ -39,8 +39,20 @@ a:visited {
     border-bottom: 3px solid black;
 }
 
+.panel.content {
+	width: 10em;
+	border: 2px dotted black;
+	background: #dedede;
+	font-size: 1.25em;
+}
+
 #title {
 	font-size: 1.5em;
 	font-weight: 600;
 	margin-right: 2em;
+}
+
+#current-page {
+	font-size: 1.25em;
+	font-weight: 600;
 }

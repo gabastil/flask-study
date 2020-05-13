@@ -1,38 +1,43 @@
 {% extends "base.html" %}
 
+{% block header %}
+|
+    <span id="current-page">Sign In</span> |
+    <a href="{{url_for('admin', name='John')}}">User's Page</a>
+{% endblock %}
+
 {% block content %}
-<h1>Sign In</h1>
+    <h1>Sign In</h1>
 
-<form class='panel' action="" method="post">
-    {{form.hidden_tag()}}
-    <p>
-        {{form.username.label}} <br>
-        {{form.username(size=32)}}
-        {% for error in form.username.errors %}
-        <span style='color: red;'>[{{error}}]</span>
-        {% endfor %}
-    </p>
-    <p>
-        {{form.password.label}} <br>
-        {{form.password(size=32)}}
-    </p>
-    <p>
-        {{form.remember_me()}} {{form.remember_me.label}}
-    </p>
-    <p>
-        {{form.submit()}}
-    </p>
+    <form class='panel' action="" method="post">
+        {{form.hidden_tag()}}
+        <p>
+            {{form.username.label}} <br>
+            {{form.username(size=32)}}
+            {% for error in form.username.errors %}
+            <span style='color: red;'>[{{error}}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{form.password.label}} <br>
+            {{form.password(size=32)}}
+        </p>
+        <p>
+            {{form.remember_me()}} {{form.remember_me.label}}
+        </p>
+        <p>
+            {{form.submit()}}
+        </p>
 
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
 
-</form>
-
+    </form>
 {% endblock %}
