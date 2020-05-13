@@ -10,9 +10,37 @@ html, body {
     font-family: "Helvetica", sans-serif;
 }
 
+a {
+	margin: 0 1em 0 1em;
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	text-shadow: 0em 0em 0.1em white;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: red;
+}
+
 .panel {
+    padding: 1em;
+    vertical-align: middle;
+}
+
+.panel.header {
     height: 50%;
-    width: 75%;
-    background: lightgray;
-    border: 3px solid black;
+    background: #a276cf;
+    border-bottom: 3px solid black;
+}
+
+#title {
+	font-size: 1.5em;
+	font-weight: 600;
+	margin-right: 2em;
 }
