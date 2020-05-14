@@ -6,6 +6,7 @@ route = app.route
 names = 'Bob Joe Jack Jane Jill Jess'.split()
 kwargs = {'data': names, 'length': len(names)}
 
+
 @route("/home")
 @route("/")
 def home():
