@@ -33,26 +33,32 @@ a:visited {
     vertical-align: middle;
 }
 
-.panel.header {
+.header {
     height: 50%;
     background: #a276cf;
     border-bottom: 3px solid black;
 }
 
-.panel.content {
-	width: 10em;
-	border: 2px dotted black;
-	background: #dedede;
+.content {
+    height: 100vh;
+    margin: 0;
+	border: none;
+	background: red;
 	font-size: 1.25em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.login {
+    margin: auto;
+    border: none;
 }
 
 #title {
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 600;
 	margin-right: 2em;
 }
 
 #current-page {
-	font-size: 1.25em;
-	font-weight: 600;
 }

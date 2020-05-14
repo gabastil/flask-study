@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 
 {% block header %}
-|
-    <span id="current-page">Sign In</span> |
-    <a href="{{url_for('admin', name='John')}}">User's Page</a>
+<span id="header">Sign In Page</span>
 {% endblock %}
 
 {% block content %}
     <h1>Sign In</h1>
 
-    <form class='panel' action="" method="post">
+    <form class='panel login' action="" method="post">
         {{form.hidden_tag()}}
         <p>
             {{form.username.label}} <br>

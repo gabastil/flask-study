@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block header %}
-|
-    <a href="{{url_for('signin')}}">Sign In</a> |
-	<a href="{{url_for('admin', name='John')}}">User's Page</a>
+    {% if length == 1 %}
+        <span id="header">Welcome to {{data[0]}}'s Page</span>
+    {% else %}
+        <span id="header">Welcome</span>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
 
 	<div class='panel content'>
 		{% for name in data %}
-		    <p>This is the <a>{{name}}'s</a> item.</p>
+		    <p>This is the <a href={{url_for('user', name=name)}}>{{name}}'s</a> item.</p>
 		{% endfor %}
 	</div>
 
