@@ -1,5 +1,5 @@
 from flask import url_for, redirect, render_template, flash
-from . import app, LoginForm
+from app import app, LoginForm
 
 route = app.route
 
